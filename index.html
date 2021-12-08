@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Real-Time Monitoring</title>
+  </head>
+  <body>
+  		<!-- Baris pertama -->
+  		<div class="row">
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">FLAMBOYAN</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempFlamboyan">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humFlamboyan">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">PALM</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempPalm">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humPalm">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">TERATAI</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempTeratai">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humTeratai">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">GUNDALA</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempGundala">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humGundala">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RAFLESIA</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRaflesia">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRaflesia">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">SUNFLOWER</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempSunflower">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humSunflower">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<br>
+			<!-- Baris Kedua -->
+			<div class="row">
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">P. TERATAI</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempPackingTeratai">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humPackingTeratai">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">P. FLAMBOYAN</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempPackingFlamboyan">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humPackingFlamboyan">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">PANDAN</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempPandan">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humPandan">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">TULIP</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempTulip">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humTulip">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RC-01</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRC-01">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRC-01">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RC-02</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRC-02">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRC-02">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<br>
+			<!-- Baris Ketiga -->
+			<div class="row">
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RC-03</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRC-03">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRC-03">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RC-04</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRC-04">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRC-04">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RC-05</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRC-05">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRC-05">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RC-06</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRC-06">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRC-06">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RC-07</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRC-07">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRC-07">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">RC-08</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempRC-08">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humRC-08">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<br>
+			<!-- Baris Keempat -->
+			<div class="row">
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">COLD ROOM</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempColdRoom">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humColdRoom">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">GUDANG BAKU</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempGudangBaku">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humGudangBaku">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">P. BASAH</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempPenimbanganBasah">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humPenimbanganBasah">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-2">
+			    <div class="card">
+			      <div class="card-body ">
+			        <h5 class="card-title font-weight-bold">P. KERING</h5>
+			        <ul class="list-group list-group-flush">
+						    <li class="list-group-item" style="color: red"><span id="tempPenimbanganKering">00.00</span><sup>&#8451</sup></li>
+						    <li class="list-group-item" style="color: blue"><span id="humPenimbanganKering">00.00</span><sup>%</sup></li>
+						  </ul>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="scrpit.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
