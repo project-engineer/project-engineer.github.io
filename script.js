@@ -84,7 +84,7 @@ for (let i=0; i <ruangan.length; i++) {
 		};
 		xhttp.open("GET", url, true);
 		xhttp.send();
-	}, 15000);
+	}, 5000);
 
 	setInterval(function() {
 		let xhttp = new XMLHttpRequest();
@@ -98,5 +98,5 @@ for (let i=0; i <ruangan.length; i++) {
 		};
 		xhttp.open("GET", url, true);
 		xhttp.send();
-	}, 15000);
+	}, 5000);
 }
