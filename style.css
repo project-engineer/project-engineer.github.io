@@ -13,13 +13,6 @@
 	text-align: center;
 	display: inline-block;
 }
-.card-title2 {
-	text-align: center;
-	background-color: #222;
-	margin-bottom: 0 !important;
-	padding: 6px 0px;
-    color: #ADFF2F;
-}
 
 .text-temp{
 	color: green;
