@@ -71,6 +71,31 @@ const identitasHum = [
 	"humPenimbanganKering"
 ];
 
+const maxRange = [
+	"22", //flamboyan
+	"22", //palm
+	"22", //teratai
+	"22", //gundala
+	"27", //raflesia
+	"27", //sunflower
+	"22", //p.terati
+	"22", //p. flamboyan
+	"27", //pandan
+	"25", //tulip
+	"4", //rc1
+	"4", //rc2
+	"4", //rc3
+	"4", //rc4
+	"4", //rc5
+	"4", //rc6
+	"4", //rc7
+	"4", //rc8
+	"4", //coldroom
+	"25", //gudang baku
+	"22", //p basah
+	"22", //p kering
+];
+
 for (let i=0; i <ruangan.length; i++) {
 	setInterval(function() {
 		let xhttp = new XMLHttpRequest();
@@ -79,8 +104,14 @@ for (let i=0; i <ruangan.length; i++) {
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				console.log(this.responseText);
-				document.getElementById(identitasTemp[i]).innerHTML = this.responseText;
-			}
+				let x = this.responseText;
+				if (x > maxRange[i]) {
+					document.getElementById(identitasTemp[i]).innerHTML = "&#x26A0 " + this.responseText  + "<sup>&#8451</sup>";
+					document.getElementById(identitasTemp[i]).style.color = "orange"
+				} else {
+					document.getElementById(identitasTemp[i]).innerHTML = this.responseText + "<sup>&#8451</sup>";
+				}
+			};
 		};
 		xhttp.open("GET", url, true);
 		xhttp.send();
@@ -93,8 +124,8 @@ for (let i=0; i <ruangan.length; i++) {
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				console.log(this.responseText);
-				document.getElementById(identitasHum[i]).innerHTML = this.responseText;
-			}
+				document.getElementById(identitasHum[i]).innerHTML = this.responseText + "<sup>%</sup>";
+			};
 		};
 		xhttp.open("GET", url, true);
 		xhttp.send();
