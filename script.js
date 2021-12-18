@@ -107,7 +107,7 @@ for (let i=0; i <ruangan.length; i++) {
 				let x = this.responseText;
 				if (x > maxRange[i]) {
 					document.getElementById(identitasTemp[i]).innerHTML = "&#x26A0 " + this.responseText  + "<sup>&#8451</sup>";
-					document.getElementById(identitasTemp[i]).style.color = "orange"
+					document.getElementById(identitasTemp[i]).style.color = "orange";
 				} else {
 					document.getElementById(identitasTemp[i]).innerHTML = this.responseText + "<sup>&#8451</sup>";
 					document.getElementById(identitasTemp[i]).style.color = "green";
