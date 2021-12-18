@@ -73,14 +73,14 @@ const identitasHum = [
 
 const maxRange = [
 	"22", //flamboyan
-	"22", //palm
+	"35", //palm
 	"22", //teratai
 	"22", //gundala
 	"27", //raflesia
 	"27", //sunflower
 	"22", //p.terati
 	"22", //p. flamboyan
-	"27", //pandan
+	"35", //pandan
 	"25", //tulip
 	"4", //rc1
 	"4", //rc2
