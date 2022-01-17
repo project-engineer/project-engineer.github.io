@@ -17,9 +17,9 @@
 	font-size: 11px;
 }
 .list-group-item2 {
-	font-size: 15px;
-	text-align: center;
-	display: inline-block;
+	font-size: 15px !important;
+	text-align: center !important;
+	display: inline-block !important;
 }
 /*
 .text-temp{
