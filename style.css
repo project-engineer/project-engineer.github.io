@@ -13,6 +13,14 @@
 	text-align: center;
 	display: inline-block;
 }
+.supersub {
+	font-size: 11px;
+}
+.list-group-item2 {
+	font-size: 15px;
+	text-align: center;
+	display: inline-block;
+}
 /*
 .text-temp{
 	color: green;

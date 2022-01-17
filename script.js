@@ -93,13 +93,64 @@ const maxRange = [
 	"4", //coldroom
 	"25", //gudang baku
 	"22", //p basah
-	"22", //p kering
+	"22" //p kering
+];
+
+const date_stamp = [
+	"dateFlamboyan_stamp",
+	"datePalm_stamp",
+	"dateTeratai_stamp",
+	"dateGundala_stamp",
+	"dateRaflesia_stamp",
+	"dateSunflower_stamp",
+	"datePackingTeratai_stamp",
+	"datePackingFlamboyan_stamp",
+	"datePandan_stamp",
+	"dateTulip_stamp",
+	"dateRC-01_stamp",
+	"dateRC-02_stamp",
+	"dateRC-03_stamp",
+	"dateRC-04_stamp",
+	"dateRC-05_stamp",
+	"dateRC-06_stamp",
+	"dateRC-07_stamp",
+	"dateRC-08_stamp",
+	"dateColdRoom_stamp",
+	"dateGudangBaku_stamp",
+	"datePenimbanganBasah_stamp",
+	"datePenimbanganKering_stamp"
+];
+
+const time_stamp = [
+	"timeFlamboyan_stamp",
+	"timePalm_stamp",
+	"timeTeratai_stamp",
+	"timeGundala_stamp",
+	"timeRaflesia_stamp",
+	"timeSunflower_stamp",
+	"timePackingTeratai_stamp",
+	"timePackingFlamboyan_stamp",
+	"timePandan_stamp",
+	"timeTulip_stamp",
+	"timeRC-01_stamp",
+	"timeRC-02_stamp",
+	"timeRC-03_stamp",
+	"timeRC-04_stamp",
+	"timeRC-05_stamp",
+	"timeRC-06_stamp",
+	"timeRC-07_stamp",
+	"timeRC-08_stamp",
+	"timeColdRoom_stamp",
+	"timeGudangBaku_stamp",
+	"timePenimbanganBasah_stamp",
+	"timePenimbanganKering_stamp"
 ];
 
 for (let i=0; i <ruangan.length; i++) {
+
 	setInterval(function() {
 		let xhttp = new XMLHttpRequest();
-		let urlBase = "https://script.google.com/macros/s/AKfycbzSBYTERW8lvuolLt7QifEVSmd093Ue55Ur2QvdqWEM0y_UJTxMnxKuf9Kkgg_Sk9SFfQ/exec";
+		let urlBase = "https://script.google.com/macros/s/AKfycbyW51_Rl0jfpPq3OhI-N1s_GNX6IWPJnsLXSgMGKCinE301GfiY-U3vcdYMFKx7n0scug/exec";
 		let url = urlBase + "?ruangan=" + ruangan[i] + "&tipe=suhu";
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
@@ -111,7 +162,7 @@ for (let i=0; i <ruangan.length; i++) {
 				} else {
 					document.getElementById(identitasTemp[i]).innerHTML = this.responseText + "<sup>&#8451</sup>";
 					document.getElementById(identitasTemp[i]).style.color = "green";
-				}
+				};
 			};
 		};
 		xhttp.open("GET", url, true);
@@ -120,7 +171,7 @@ for (let i=0; i <ruangan.length; i++) {
 
 	setInterval(function() {
 		let xhttp = new XMLHttpRequest();
-		let urlBase = "https://script.google.com/macros/s/AKfycbzSBYTERW8lvuolLt7QifEVSmd093Ue55Ur2QvdqWEM0y_UJTxMnxKuf9Kkgg_Sk9SFfQ/exec";
+		let urlBase = "https://script.google.com/macros/s/AKfycbyW51_Rl0jfpPq3OhI-N1s_GNX6IWPJnsLXSgMGKCinE301GfiY-U3vcdYMFKx7n0scug/exec";
 		let url = urlBase + "?ruangan=" + ruangan[i] + "&tipe=lembab";
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
@@ -131,4 +182,41 @@ for (let i=0; i <ruangan.length; i++) {
 		xhttp.open("GET", url, true);
 		xhttp.send();
 	}, 5000);
-}
+
+	setInterval(function() {
+		let xhttp = new XMLHttpRequest();
+		let urlBase = "https://script.google.com/macros/s/AKfycbyW51_Rl0jfpPq3OhI-N1s_GNX6IWPJnsLXSgMGKCinE301GfiY-U3vcdYMFKx7n0scug/exec";
+		let url = urlBase + "?ruangan=" + ruangan[i] + "&tipe=dateStamp";
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				console.log(this.responseText);
+				let Str = this.responseText;
+				let newStr = Str.slice(4, 15);
+				console.log(newStr);
+				document.getElementById(date_stamp[i]).innerHTML = newStr;
+			};
+		};
+		xhttp.open("GET", url, true);
+		xhttp.send();
+	}, 5000);
+
+	setInterval(function() {
+		let xhttp = new XMLHttpRequest();
+		let urlBase = "https://script.google.com/macros/s/AKfycbyW51_Rl0jfpPq3OhI-N1s_GNX6IWPJnsLXSgMGKCinE301GfiY-U3vcdYMFKx7n0scug/exec";
+		let url = urlBase + "?ruangan=" + ruangan[i] + "&tipe=timeStamp";
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				console.log(this.responseText);
+				let Str = this.responseText;
+				let newStr = Str.slice(16, 21);
+				// let menit = newStr.slice(0, 2);
+				// let detik = Number(newStr.slice(3, 5));
+				// let newDetik = String(detik - 25);
+				// console.log(menit + ":" + newDetik);
+				document.getElementById(time_stamp[i]).innerHTML = newStr;
+			};
+		};
+		xhttp.open("GET", url, true);
+		xhttp.send();
+	}, 5000);
+};
