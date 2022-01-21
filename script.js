@@ -208,12 +208,25 @@ for (let i=0; i <ruangan.length; i++) {
 			if (this.readyState == 4 && this.status == 200) {
 				console.log(this.responseText);
 				let Str = this.responseText;
-				let newStr = Str.slice(16, 21);
-				// let menit = newStr.slice(0, 2);
-				// let detik = Number(newStr.slice(3, 5));
-				// let newDetik = String(detik - 25);
-				// console.log(menit + ":" + newDetik);
-				document.getElementById(time_stamp[i]).innerHTML = newStr;
+				let Jam = Number(Str.slice(16, 18));
+				let Menit = Number(Str.slice(19, 21));
+				
+				let Menit2 = Menit - 25;
+
+				let Menit3 = (Menit2 < 0) ? Menit + 60 - 25 : Menit2;
+
+				let Menit4 = (Menit3 < 10) ? "0" + String(Menit3) : Menit3;
+
+				let Jam2 = (Menit < 35) ? Jam - 1 : Jam;
+
+				let Jam3 = (Jam2 == -1) ? 23 : Jam2;
+
+				let Jam4 = (Jam3 < 10) ? "0" + String(Jam3) : Jam3;
+
+				let Waktu = String(Jam4) + ":" + String(Menit4);
+
+				console.log(Waktu);
+				document.getElementById(time_stamp[i]).innerHTML = Waktu;
 			};
 		};
 		xhttp.open("GET", url, true);
