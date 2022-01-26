@@ -207,17 +207,18 @@ for (let i=0; i <ruangan.length; i++) {
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				console.log(this.responseText);
-				let Str = this.responseText;
-				let Jam = Number(Str.slice(16, 18));
-				let Menit = Number(Str.slice(19, 21));
-				
-				let Menit2 = Menit - 25;
+				let Str = this.responseText; //22:50
+				let Jam = Number(Str.slice(16, 18)); //23
+				let Menit = Number(Str.slice(19, 21)); // 15
+				let Menit2 = Menit - 25; //-10
 
-				let Menit3 = (Menit2 < 0) ? Menit + 60 - 25 : Menit2;
+				let Menit3 = (Menit2 < 0) ? Menit + 60 - 25 : Menit2; //50
 
-				let Menit4 = (Menit3 < 10) ? "0" + String(Menit3) : Menit3;
+				let Menit4 = (Menit3 < 10) ? "0" + String(Menit3) : Menit3; //50
 
-				let Jam2 = (Menit < 35) ? Jam - 1 : Jam;
+				let Jam2 = (Menit2 < 0) ? Jam - 1 : Jam; //1:40
+
+				// let Jam_2 = (Jam2 == 0) ? Jam2 + 1 : Jam2;
 
 				let Jam3 = (Jam2 == -1) ? 23 : Jam2;
 
